@@ -9,3 +9,14 @@ ls , cd , cat , file , du , find
 
 ----------------------------------------------------------------------------------------------------
 
+> Ok so again we are tasked with opening a file in order to locate the password for the next level.
+
+> Now that I am logged into the Bandit1 level I am once again going to use "ls -alps" command in order to see the files 
+  in the current directory I am in.
+
+> I can see that there is a "-" file so again I am going to try to access the file 
+
+> I tried to use the cat command in order to open it but it didn't work, as expected I felt as the game would try to make 
+  me use different tatics than the last
+
+> 
