@@ -49,7 +49,7 @@ ls , cd , cat , file , du , find
 - Create new files
 - Redirect output
 
-##Option	Description
+## Option	Description
 -n	Number all output lines
 -b	Number non-blank lines only
 -s	Squeeze multiple blank lines into one
