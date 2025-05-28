@@ -1,5 +1,5 @@
-# overthewire-bandit
-OverTheWire - Bandit
+
+# OverTheWire - Bandit
 
 I will be documenting how I am learning and expanding my Linux knowledge by completing CTF's and in this case I will be using OverTheWire Wargames. 
 
