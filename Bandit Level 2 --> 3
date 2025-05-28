@@ -1,0 +1,30 @@
+Bandit Level 2 --> 
+
+Goal 
+
+The password for the next level is stored in a file called spaces in this filename located in the home directory
+
+Commands you may need to solve this level
+ls , cd , cat , file , du , find
+
+--------------------------------------------------------------------------------------------------------------------
+
+> Once again the password is located in a file.
+
+> We will once again use the command "ls -alps" 
+
+> Again we see all the files in the home directory and specifically "spaces in this filename" file
+
+> So just looking at it I can tell the spaces in the filename is the problem I'll face in this level
+
+# One quick google search later and it seems that we need to "escape the spaces" in the filename so the 
+  shell does not not treat them like seperate arguments. We can use "\" after the last letter of each word
+
+> With this information I am going to try the command " cat spaces\ in\ this\ filename
+
+> It worked! The file is open and the password is shown
+
+> Password for Bandit3 = MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+
+
