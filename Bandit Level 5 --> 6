@@ -1,0 +1,45 @@
+Bandit Level 5 --> 6
+
+Goal
+
+The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
+
+human-readable
+1033 bytes in size
+not executable
+Commands you may need to solve this level
+ls , cd , cat , file , du , find
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+> So again we see that we need to be in the "inhere" directory to start so we are going to use "cd inhere" to change directories
+
+> I used "ls -alps" to see all the files in the directory. I can see directories named "maybehere00 - maybehere19"
+
+> Again we are given certian properties so we can most likely use filters in order to make the search easier
+
+# I went back to my "find" command cheat sheet and I think I have a soultion to the problem that involes using the past command 
+  from last lvl
+
+> I am going to expand on the command that got us the password last lvl
+
+> The command is going to be ;
+  find . -type f -size 1033c ! -executable -exec file {} + | grep "ASCII text"
+
+> Breaking it down:
+  - Make sure we are searching for files only ( file . -type f) 
+  - Size of the file in bytes (-size 1033c) (c is bytes)
+  - Not an executable file (! -executable) (! means excude) 
+  - Determine file type found (-exec file {} +)
+  - Human-readable only (grep "ASCII text")
+
+> After inputting that command we get returned -- 
+  ./maybehere07/.file2 
+
+> Need to change directories to maybehere07. cd ./maybehere07
+
+> Here we know that the file we need to open is .file2 
+
+> Use "cat ./.file2 and we open it to the password 
+
+> Password for Bandit6 = HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
