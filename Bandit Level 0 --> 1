@@ -1,1 +1,66 @@
+Bandit Level 0 --> 1 
 
+Goal
+
+The password for the next level is stored in a file called readme located in the home directory. 
+Use this password to log into bandit1 using SSH.
+Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.
+
+Commands you may need to solve this level
+ls , cd , cat , file , du , find
+
+----------------------------------------------------------------------------------------------------------------------
+
+> Ok so here we are just trying to locate and read the "readme" file that is located in the home directory. 
+
+> In order to see files in linux the command we would use is "ls". 
+> This command will show and list the files that are in the directory you are currently in.
+
+## Option	Description for ls Command
+-a	Show all files including hidden files (. & ..)
+-l	Long listing format (permissions, ownership, size, date)
+-h	Human-readable file sizes (used with -l)
+-R	Recursively list all subdirectories
+-S	Sort by file size, largest first
+-t	Sort by modification time, newest first
+-r	Reverse the order of sort
+-d	List directories themselves, not their contents
+-i	Show inode number of each file
+-F	Append indicator (/, *, @, etc.) for file types
+-p	Append / to directory names
+-s	Show file size in blocks
+-1	One file per line
+
+> So with the cheat sheet that I've created above I'm going to use the command "ls -alps"
+  > I'm doing this so it will:
+    - Show hidden files if any (-a) 
+    - Create the response in a log list format to make it easier to read (-l)
+    - Adds a "/" to directory names (-p)
+    - Will show the file size in blocks (s)
+
+> So after using the command "ls -alps" I can clearly see that there is a "readme" file w/ the owner being Bandit1/
+
+> In order to read files we can use the "cat" command 
+
+## The cat command (short for concatenate) is used to:
+
+- Display the contents of files
+- Combine multiple files
+- Create new files
+- Redirect output
+
+##Option	Description
+-n	Number all output lines
+-b	Number non-blank lines only
+-s	Squeeze multiple blank lines into one
+-T	Show tabs as ^I
+-E	Show $ at the end of each line
+-A	Show non-printing characters and combines -vET
+-v	Show non-printable characters (excluding tabs and newlines)
+
+> Using the cat command we get a quick Congratulations and the password for the next level. 
+
+> Password for Bandit1 = ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+
+    
+    
