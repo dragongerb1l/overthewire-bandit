@@ -1,0 +1,30 @@
+Bandit Level 3 --> 4
+
+Goal 
+
+The password for the next level is stored in a hidden file in the inhere directory.
+
+Commands you may need to solve this level
+ls , cd , cat , file , du , find
+
+-------------------------------------------------------------------------------------------------
+
+> The password for the next level is now in a hidden file in another directory.
+
+> We can just use the "ls" commadn to make sure that there is a "inhere" directory
+
+> We see that there is a "inhere" directory
+
+> We are going to use the "cd" command as that command will allow us to change to another directory. "cd inhere" 
+
+> We already know that if we were to just use the "ls" command, no hidden files would show 
+
+> So we are once again going to use old reliable "ls -alps"
+
+> We can now see that there is a file named "...Hiding-From-You" 
+
+> I'm guessing that the ... will mess with the system and just using cat is not going to work
+
+> I was totally wrong and that using the command "cat ...Hiding-From-You" worked and gave us the password for the next lvl
+
+> Password for Bandit4 = 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
