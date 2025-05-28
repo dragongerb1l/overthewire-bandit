@@ -1,0 +1,16 @@
+Bandit Level 8 --> 9
+
+Goal
+
+The password for the next level is stored in the file data.txt and is the only line of text that occurs only once
+
+Commands you may need to solve this level
+grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+
+--------------------------------------------------------------------------------------------------------------------------
+
+> Ok so again we the data.txt file and this time we are looking for a line that occurs only once
+
+> Again looking at the suggested commands uniq is speaking to me as it sounds like it finds things that are well unique
+
+>
