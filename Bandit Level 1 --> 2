@@ -19,4 +19,12 @@ ls , cd , cat , file , du , find
 > I tried to use the cat command in order to open it but it didn't work, as expected I felt as the game would try to make 
   me use different tatics than the last
 
-> 
+# So with a quick google search I learned that, A file named - (just a hyphen) can be tricky in Linux because - is usually interpreted 
+  as stdin (standard input) by many commands like cat, less, cp, etc.
+
+# Google has suggested that I use "./" in front of the hyphen in order for it to refer it as the file.
+
+> I will now use the "cat ./-" command to see if that will open the file.
+
+> It has opened the file and given me the password for Bandit2 which is - 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+
