@@ -26,5 +26,7 @@ ls , cd , cat , file , du , find
 
 > I will now use the "cat ./-" command to see if that will open the file.
 
-> It has opened the file and given me the password for Bandit2 which is - 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+> It has opened the file and given me the password.
+
+> Password for Bandit2 - 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
 
