@@ -64,6 +64,17 @@ grep -C 2 "hello" file.txt	// Show 2 lines before and after match
   find . type -f -exec file {} + | grep "ASCII text"
 
   Doing the following:
-  - find . type - file 
+  - This will narrow the results to finding a file and only a file (find . type - file)
+  - This will show me the results if any in what file is the answer to what I'm looking for (-exec file {} +) 
+  - Use the output of one command and use it as the input for another (|)
+  - search for human-readable text (grep "ASCII text" 
+
+> After inputting the above command we get an output of ./-file07: ASCII text
+
+> So with this information I am going to use the cat command in order to open and hopefully get human-readable text + password
+
+> Just like that we get the password
+
+> Password for Bandit5 = 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
   
 
