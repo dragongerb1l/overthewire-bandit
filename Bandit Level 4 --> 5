@@ -1,0 +1,67 @@
+Bandit Level 4 --> 5
+
+Goal
+
+The password for the next level is stored in the only human-readable file in the inhere directory. 
+Tip: if your terminal is messed up, try the “reset” command.
+
+Commands you may need to solve this level
+ls , cd , cat , file , du , find
+
+--------------------------------------------------------------------------------------------------------------
+
+> First things first we must switch to the "inhere" directory. "cd inhere"
+
+> I'm again going to use the "ls -alps" command to see the files listed. 
+  I'm hoping something will pop up indicting which file is human-readable
+
+> Files from -file00 to -file09 appeared, no clues on what is human-readable and non human-readable
+
+> Used "cat ./-file00" in order to see what the file contain. Definitely not human-readable. 
+  I could go though each file individually, but I feel there can be more efficent ways
+
+# Using the suggested above on what command might be helpful I looked more into the find command
+
+  # Find Command Cheat Sheet 
+
+  find .	// List all files and directories recursively from the current directory
+  find /path/to/search -name "filename"	// Find file by exact name
+  find . -iname "file.txt"	// Case-insensitive search
+  find . -type f	// Find only files
+  find . -type d	// Find only directories
+  find . -name "*.txt"	// Find all .txt files
+  find . -size +1M	// Files larger than 1 MB
+  find . -size -500k	// Files smaller than 500 KB
+  find . -empty  // Find empty files and directories
+  find . -perm 777	//   Files with 777 permissions
+  find . -mtime -7	// Modified in the last 7 days
+  find . -atime +30	// Accessed more than 30 days ago
+
+# Using find is only the first portion of the command we need to use "|" in order to use the output of one command 
+  and use it as the input for another
+
+# Also was pointed in my searches to look into using the Grep command 
+
+# grep (Global Regular Expression Print) searches for lines matching a pattern in files or output.
+
+# Command	Description
+grep "hello" file.txt	// Find lines containing "hello" in file.txt
+grep -i "hello" file.txt	// Case-insensitive search
+grep -r "hello" .	// Recursively search in current directory
+grep -l "hello" *.txt	// Show only filenames with matches
+grep -n "hello" file.txt	// Show line numbers of matches
+grep -v "hello" file.txt	// Invert match (show lines not containing "hello")
+grep -c "hello" file.txt	// Count number of matching lines
+grep -w "hello" file.txt	// Match the whole word “hello”
+grep -A 3 "hello" file.txt	// Show 3 lines after match
+grep -B 2 "hello" file.txt	// Show 2 lines before match
+grep -C 2 "hello" file.txt	// Show 2 lines before and after match
+
+## I create the cheatsheets for a bunch of the common uses of the commands not all of them 
+  I will use the "man" command in order to find out more uses for a specific command
+
+> Ok so with the infomation I got from google and the manuel page I am going to use:
+  find . type -f -exec file {} + | grep "ASCII text"
+
+  
+
