@@ -13,4 +13,12 @@ grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
 
 > Again looking at the suggested commands uniq is speaking to me as it sounds like it finds things that are well unique
 
->
+> I think I should stick with the sort command and then grep it with uniq, going to man uniq to find option for unique
+
+> Found -u for printing uniqu lines, who would have guessed
+
+> So lets try sort data.txt | uniq -u
+
+> Tried the command and we got spit out a string that looks like the password 
+
+> Password for Bandit9 = 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
