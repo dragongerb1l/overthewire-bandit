@@ -15,4 +15,12 @@ owned by group bandit6
   I just need to find the correct commands for owned by user and group
 
 > I'm going to try: 
-  find . -type f -user bandit7 -group bandit6 -size 33c 
+  find / -type f -user bandit7 -group bandit6 -size 33c 
+
+> Ok so that seemed to work, alot of files came up and ended with permission denied expect one file:
+  var/lib/dpkg/info/bandit7.password
+*there must be a way to minimize what was shown to me, could have maybe included a command to exclude files that = permissioned denied
+
+> Anyway with the file we have I'm just going to cat the file and yup we got the password
+
+> Password for Bandit7 = morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
