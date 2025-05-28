@@ -63,5 +63,7 @@ grep -C 2 "hello" file.txt	// Show 2 lines before and after match
 > Ok so with the infomation I got from google and the manuel page I am going to use:
   find . type -f -exec file {} + | grep "ASCII text"
 
+  Doing the following:
+  - find . type - file 
   
 
