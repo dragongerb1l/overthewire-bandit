@@ -1,0 +1,42 @@
+Bandit Level 9 --> 10
+
+Goal
+
+The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several ‘=’ characters.
+
+Commands you may need to solve this level
+grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> This time the string that is only human-readable contains a couple of '=' 
+
+> Going to try something similar like last time 
+
+> sort data.txt | uniq -c "="
+  - idea behind this is we are sorting the txt file and finding '=' and printing those strngs out 
+
+> Didn't work how I thought, maybe overthinking, going to try grep. Also don't think I can sort this due to encoded text. 
+  Going to replace sort with strings
+
+> Going to try " strings data.txt | grep "="
+
+# Looking more into strings command:
+    The strings command in Linux is used to extract human-readable text (printable ASCII characters) from binary files. 
+    It’s especially useful when analyzing executable files, memory dumps, 
+    or other non-text files to find embedded strings such as passwords, URLs, or error messages
+
+Command	Description
+strings file.bin	// Prints readable strings in file.bin
+strings -n 6 file	// Shows only strings 6 characters or longer
+strings /bin/ls	// Extracts strings from the ls binary
+strings -t x file	// Shows the offset (in hex) of each string
+strings -e l file	// Assumes little-endian encoding for wide characters
+
+> Tried the strings data.txt | grep "=" command and got back some encrpyted strings but since some have 
+  readable text it showed the password
+
+> Password for Bandit10 = FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+
+
