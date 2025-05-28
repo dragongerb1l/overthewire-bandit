@@ -8,3 +8,11 @@ owned by group bandit6
 
 ---------------------------------------------------------------------------------------------------------------
 
+> This is the first time that we are not directed to a certian directory or file. 
+  I used "ls -alps" because its just secondhand nature at this point. Nothing came up file or direcorty wise
+
+> So I'm guessing we will use the find command again and basically use the same final command we used last lvl
+  I just need to find the correct commands for owned by user and group
+
+> I'm going to try: 
+  find . -type f -user bandit7 -group bandit6 -size 33c 
