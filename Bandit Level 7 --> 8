@@ -1,0 +1,21 @@
+Bandit Ledvel 7 --> 8 
+
+Goal 
+
+The password for the next level is stored in the file data.txt next to the word millionth
+
+Commands you may need to solve this level
+man, grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+
+-------------------------------------------------------------------------------------------------------
+
+> Ok so see this we know the password is in the data.txt file and next to the word "millionth"
+
+> Looking at the suggested commands, grep was a command we used eariler that helped us find certian keywords
+
+> I'm going to try grep "millionth" data.txt
+  - This has us specifically looking for the string "millionth"
+
+> It worked we have the string "millionth" and the password right next to it
+
+> Pasword for Bandit8 = dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
